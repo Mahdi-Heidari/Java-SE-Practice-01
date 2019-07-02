@@ -225,11 +225,21 @@ public class JavaSEPractice01 {
 
     public static void exerciseTwelve(int value) {
 
-        System.out.println("111111");
-        for (int i = 0; i < value - 2; i++) {
-            System.out.println("1****1");
+        for (int i = 0; i < value; i++) {
+            if (i == 0 || i == value - 1) {
+                for (int j = 0; j < value; j++) {
+                    System.out.print("1");
+                }
+
+            } else {
+                System.out.print("1");
+                for (int j = 0; j < value - 2; j++) {
+                    System.out.print("*");
+                }
+                System.out.print("1");
+            }
+            System.out.println("");
         }
-        System.out.println("111111");
     }
 
     public static double exerciseThirteen(double x) {
