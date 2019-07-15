@@ -9,6 +9,8 @@ public class JavaSEPractice01 {
         Scanner input = new Scanner(System.in);
         
                 System.out.println(hundredsDigit(input.nextInt()));
+                System.out.println(factorial(input.nextInt()));
+
        
 //        ****************************************************************
 
@@ -339,5 +341,19 @@ public class JavaSEPractice01 {
         String s = String.valueOf(number);
         return s.charAt(s.length() - 3) - '0';
          */
+    }
+    
+     /**
+     * This method calculates the factorial of n.
+     * @param n The number to calculate the factorial of.
+     * @return The factorial of n.
+     */
+    public static long factorial(int n) {
+
+        long fact = 1;
+        for (int i = 2; i <= n; i++) {
+            fact *= i;
+        }
+        return fact;
     }
 }
