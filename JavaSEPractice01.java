@@ -7,6 +7,8 @@ public class JavaSEPractice01 {
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
+        
+                System.out.println(hundredsDigit(input.nextInt()));
        
 //        ****************************************************************
 
@@ -316,5 +318,26 @@ public class JavaSEPractice01 {
             a /= 10;
         }
         return max;
+    }
+    
+     /**
+ * This method returns the hundreds digit of the input number.
+ * @param number The number to find the hundreds digit of.
+ * @return The hundreds digit.
+ */
+    public static int hundredsDigit(int number) {
+
+        if (number < 100) {
+            return 0;
+        } else {
+            for (int i = 0; i < 2; i++) {
+                number /= 10;
+            }
+            return number % 10;
+        }
+        /*
+        String s = String.valueOf(number);
+        return s.charAt(s.length() - 3) - '0';
+         */
     }
 }
